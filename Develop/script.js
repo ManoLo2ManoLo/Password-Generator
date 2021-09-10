@@ -1,86 +1,46 @@
 // Assignment code here
-document.getElementById("generate").addEventListener("click", passwordCode);
+var generatePassword = function() {
+  do {
+    var passLength = window.prompt("How long do you want the password to be? (8-128)");
+    console.log("Password Length is: " + passLength);
+  } while (isNaN(passLength) || passLength < 8 || passLength > 128)
 
-function passwordCode() {
-  passLength();
-  passLC();
-  passUC();
-  passNum();
-  passSpec();
-  passGenerator();
-}
+  var passLC = window.confirm("Does your password need an lowercase?");
+  var passUC = window.confirm("Does your password need an uppercase?");
+  var passNum = window.confirm("Does your password need a numeric character?");
+  var passSpec = window.confirm("Does your password need a special characters?");
 
-// function to see how long the generated password has to be
-var passLength = function(pLength) {
-  var pLength = window.prompt("How long do you want the password to be? (8-128)");
+  var charList = " ";
+  var randomPassword = [];
   
-  if(isNaN(pLength) || pLength < 8 || pLength > 128) {
-    return passLength();
-  }
-  console.log("Password Length is: " + pLength);
-  return pLength;
-}
-
-var number = passLength();
-
-// function to see if the password needs lowercase character
-var passLC = function() {
-  var pLowerC = window.confirm("Does your password need an lowercase?");
-  
-  if (pLowerC) {
+  if (passLC === true) {
     console.log("The password DOES requires a lowercase character");
-    return true;
-  } else {
-    console.log("The password DOES NOT requires a lowercase character");
-    return false;
+    charList += "abcdefghijklmnopqrstuvwxyz";
   }
-}
-
-// function to see if the password needs uppercase character
-var passUC = function() {
-  var pUpperC = window.confirm("Does your password need an uppercase?");
-  
-  if (pUpperC) {
+  if (passUC === true) {
     console.log("The password DOES requires a uppercase character");
-    return true;
-  } else {
-    console.log("The password DOES NOT requires a uppercase characters");
-    return false;
+    charList += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   }
-}
-
-// function to see if the password needs numeric character
-var passNum = function() {
-  var pNum = window.confirm("Does your password need a numeric character?");
-  
-  if (pNum) {
+  if (passNum) {
     console.log("The password DOES requires a numeric character");
-    return true;
-  } else {
-    console.log("The password DOES NOT requires a numeric characters");
-    return false;
+    charList += "1234567890";
   }
-}
-
-// function to see if the password needs special character
-var passSpec = function() {
-  var pSpec = window.confirm("Does your password need a special characters?");
-  
-  if (pSpec) {
+  if (passSpec) {
     console.log("The password DOES requires a special character");
-    return true;
-  } else {
-    console.log("The password DOES NOT requires a special characters");
-    return false;
+    charList += "+=!@#$%^&*()?<>";
   }
-}
 
-var passGenerator = function(_pLength) {
-  for (var i=0; i < number; i++) {
-    console.log(Math.random());
+  for (var i = 0; i < passLength; i++) {
+    do {
+    randomPassword += charList[Math.floor(Math.random() * charList.length)];
+    } while (randomPassword === 0)
   }
-}
 
+  console.log(charList);
+  console.log(randomPassword);
+
+  return randomPassword;
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
