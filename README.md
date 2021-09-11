@@ -4,6 +4,8 @@
 Link to GitHub Repository: https://github.com/ManoLo2ManoLo/Password-Generator.git
 Link to Application: https://manolo2manolo.github.io/Password-Generator/
 
+![Screenshot (286)](https://user-images.githubusercontent.com/88364269/132936770-146d8d81-bb45-440b-b674-777adca6cbc4.png)
+
 === CREDIT === 
 This code was provided by Rutgers University's Coding Bootcamp. The files/codes were revised and edited by Manuel Canas-Menendez.
 
