@@ -5,12 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"/> 
+        <link rel="stylesheet" href="./assets/css/style.css"/>
         <title>Password Generator</title>
     </head>
     <body>
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <h1 class="navbar-item" href="https://bulma.io">
+                <h1 class="navbar-item title is-4" href="https://bulma.io">
                     Password Generator    
                 </h1>
             </div>
@@ -20,9 +21,9 @@
             <div class="column is-half">
                 <div class="card py-5 px-5">
                     <div class="field">
-                        <label class="label">How long do you want the password to be? (8 - 128 characters)</label>
+                        <label class="label text-center">How long do you want the password to be? (8 - 128 characters)</label>
                         <div class="control">
-                            <input class="input" type="number" id="length">
+                            <input class="input" id="length" />
                         </div>
                     </div>
 
@@ -54,15 +55,15 @@
                         </label>
                     </div>
 
-                    <div class="field">
+                    <div class="field center">
                         <button id="submitBtn" class="button">Generate Password</button>
                     </div>
                 </div>
             </div>
 
-            <div class="column is-half">
+            <div class="column is-half center text-center">
                 <div class="card py-5 px-5">
-                    <div class="field">
+                    <div class="field text-center center">
                         <p class="title is-6">Generated Password</p>
                     </div>
 

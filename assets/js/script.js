@@ -1,6 +1,6 @@
 const submitBtn = document.querySelector('#submitBtn');
 
-const length = document.querySelector('#length').value;
+const length = document.querySelector('#length').value.trim();
 const lowercase = document.querySelector('#lowercase');
 const uppercase = document.querySelector('#uppercase');
 const numeric = document.querySelector('#numeric');
