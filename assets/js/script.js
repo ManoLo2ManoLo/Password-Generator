@@ -1,6 +1,6 @@
 const submitBtn = document.querySelector('#submitBtn');
 
-//const length = document.querySelector('#length').value;
+const lengthEl = document.querySelector('#lengthEl');
 const lowercase = document.querySelector('#lowercase');
 const uppercase = document.querySelector('#uppercase');
 const numeric = document.querySelector('#numeric');
@@ -9,7 +9,7 @@ const passwordEl = document.querySelector('#passwordEl');
 const errorEl = document.querySelector('#errorEl');
 
 function passwordGenerator() {
-  let length = 50;
+  let length = lengthEl.value;
   let characterList = '';
   let password = [];
 
