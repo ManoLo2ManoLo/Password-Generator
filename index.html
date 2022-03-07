@@ -9,19 +9,17 @@
         <title>Password Generator</title>
     </head>
     <body>
-        <nav class="navbar" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <h1 class="navbar-item title is-4">Password Generator</h1>
-            </div>
+        <nav class="center">
+            <h1 class="py-5 title is-4 white-text">Password Generator</h1>
         </nav>
 
-        <div class="container">
+        <div class="container py-5 center-align">
             <div class="column is-half">
-                <div class="card py-5 px-5">
+                <div class="card py-5 px-5 dark white-text">
                     <div class="field">
-                        <label class="label text-center">How long do you want the password to be? (8 - 128 characters)</label>
+                        <label class="label text-center white-text">How long do you want the password to be? (8 - 128 characters)</label>
                         <div class="control">
-                            <input class="input" id="lengthEl" type="number">
+                            <input class="input black" id="lengthEl" type="number">
                         </div>
                     </div>
 
@@ -54,7 +52,7 @@
                     </div>
 
                     <div class="field center">
-                        <button id="submitBtn" class="button">Generate Password</button>
+                        <button id="submitBtn" class="button btn">Generate Password</button>
                     </div>
 
                     <div class="field center">
@@ -64,9 +62,9 @@
             </div>
 
             <div class="column is-half center text-center">
-                <div class="card py-5 px-5">
+                <div class="card py-5 px-5 dark">
                     <div class="field text-center center">
-                        <p class="title is-6">Generated Password</p>
+                        <p class="title is-6 white-text">Generated Password</p>
                     </div>
 
                     <div class="field">
@@ -75,12 +73,14 @@
                             id="passwordEl"
                             placeholder="Your Secure Password"
                             aria-label="Generated Password"
-                            class="textarea text-center"
+                            class="textarea text-center black"
                         ></textarea>
                     </div>
                 </div> 
             </div>
         </div>
+
+        <div class="dsad"></div>
 
         <script src="./assets/js/script.js"></script>
     </body>

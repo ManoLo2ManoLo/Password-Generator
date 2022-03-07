@@ -4,6 +4,60 @@
   --spacing-three: 1rem;
   --spacing-four: calc(1rem * 1.5);
   --spacing-five: calc(1rem * 3);
+  --light: #383838;
+  --lighter: #696969;
+  --dark: #202020;
+  --darker: #181818;
+  --black: #000000;
+  --white: #FFFFFF;
+  --error: rgb(255, 0, 0);
+  --card: #0F0F0F;
+}
+
+.center-align {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+nav {
+  background-color: var(--dark);
+}
+
+html {
+  background-color: var(--darker);
+}
+
+.dark {
+  background-color: var(--card);
+}
+
+.black {
+  background-color: var(--black);
+  border: var(--lighter) 1px solid;
+  color: var(--lighter);
+}
+
+.black:hover {
+  border: var(--lighter) 1px solid;
+}
+
+.btn {
+  background-color: var(--light);
+  color: white;
+  border: none
+}
+
+.btn:hover {
+  color: white;
+}
+
+.checkbox:hover {
+  color: var(--lighter)
+}
+
+.white-text {
+  color: var(--white);
 }
 
 .text-center {
@@ -163,6 +217,31 @@
 }
 
 .error {
-  color: red;
+  color: var(--error);
   font-weight: bolder
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--darker);
+  border: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--lighter);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--light);
+}
+
+
+@media (max-width: 768px) {
+  .center-align {
+    display: block;
+  }
 }
