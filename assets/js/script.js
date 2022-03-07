@@ -48,4 +48,17 @@ function passwordGenerator() {
   }
 }
 
+function copyText() {
+  let copyLength = passwordEl.value
+
+  if (copyLength.length > 1) {
+    passwordEl.select();
+    passwordEl.setSelectionRange(0, 99999); /* For mobile devices */
+
+    navigator.clipboard.writeText(passwordEl.value);
+
+    window.alert('Copied');
+  }
+}
+
 submitBtn.addEventListener('click', passwordGenerator);
