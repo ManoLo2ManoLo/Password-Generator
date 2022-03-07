@@ -1,6 +1,4 @@
 # Password Generator
-Link to Application: https://manolo2manolo.github.io/Password-Generator/
-
 <p align="center">
     <img align="center" src="https://img.shields.io/badge/-JavaScript-000000?style=for-the-badge&logo=JavaScript" alt="JavaScript" />
     <img align="center" src="https://img.shields.io/badge/-CSS3-000000?style=for-the-badge&logo=CSS3" alt="CSS3" />
@@ -8,35 +6,23 @@ Link to Application: https://manolo2manolo.github.io/Password-Generator/
     <img align="center" src="https://img.shields.io/badge/-Bulma-000000?style=for-the-badge&logo=Bulma" alt="Bulma" />
 </p>
 
-## Table of Contents
-* [Description](#description)
-* [Screenshot](#screenshot)
-* [Credit](#credit)
-* [License](#license)
+## Link(s)
+Link to Application: https://manolo2manolo.github.io/Password-Generator/
 
 ## Description
-This application is a random password generator. The user of the application chooses what requirements the generated password will have.
+This application is a random password generator. The user of the application chooses what requirements the generated password will have. After the user successfully generates a password in the text area, in a card that is underneath the password requirements. Inside the card, there is a copy button that will copy the password to the user's clipboard (if pressed).
 
+### Password Requirements
+Length: This is a input box that accepts only numbers. (8 - 128)<br />
+Lowercase: This is a checkbox, if it is checked off, it will add lowercase character to the password.<br />
+Uppercase: This is a checkbox, if it is checked off, it will add uppercase character to the password.<br />
+Numeric: This is a checkbox, if it is checked off, it will add numeric character to the password.<br />
+Special: This is a checkbox, if it is checked off, it will add special character to the password.<br />
 
+<br />
 
-First Question: How long do you want the password to be? (8-128) <br />
-    On this question, it is displayed as a open ended window.prompt. To ensure the user inputs a valid number, there is a do-while loop that will continue to loop within itself asking the same question until the user inputs a valid response.
-
-Second Question: Does your password need an lowercase characters? <br />
-    On this question, it is displayed as a true/false window.confirm, where the user presses okay so that they confirm that that they do want lowercase characters. If the user were to press cancel, they are declining that they want lowercase characters. There is an if statement that if the user confirms that they want lowercase characters, then it will add those characters into the variable charlist. Whatever that is already in charlist would not be removed but added to whatever was previously in the list.
-
-Third Question: Does your password need an uppercase characters? <br />
-    On this question, it is displayed as a true/false window.confirm, where the user presses okay so that they confirm that that they do want uppercase characters. If the user were to press cancel, they are declining that they want uppercase characters. There is an if statement that if the user confirms that they want uppercase characters, then it will add those characters into the variable charlist. Whatever that is already in charlist would not be removed but added to whatever was previously in the list.
-
-Fourth Question: Does your password need a numeric characters? <br />
-    On this question, it is displayed as a true/false window.confirm, where the user presses okay so that they confirm that that they do want numeric characters. If the user were to press cancel, they are declining that they want numeric characters. There is an if statement that if the user confirms that they want numeric characters, then it will add those characters into the variable charlist. Whatever that is already in charlist would not be removed but added to whatever was previously in the list.
-
-Fifth Question: Does your password need a special characters? <br />
-    On this question, it is displayed as a true/false window.confirm, where the user presses okay so that they confirm that that they do want special characters. If the user were to press cancel, they are declining that they want special characters. There is an if statement that if the user confirms that they want special characters, then it will add those characters into the variable charlist. Whatever that is already in charlist would not be removed but added to whatever was previously in the list.
-
-After the user answers all the password requirement, there is a for loop that will continue to loop a random character from the charList into the variable randomPassword. It will loops the amount of times you set the length of the password to be, adding a character into randomPassword without deleting what was previously added.
-
-Throughout the whole file, there were console.log for each variable to ensure the code was running as planned. 
+If the user does not select any of the character requirement, an error message will appear advising the user to select a character requirement.<br />
+If the user does not type a number in the length, or type a number that is within the parameter (8 - 128), an error message will appear advising them to type a valid number.
 
 ## Screenshot
 ![Screenshot (553)](https://user-images.githubusercontent.com/88364269/156968400-c078a2d7-cc63-4e27-97b0-ace2d5909edb.png)
