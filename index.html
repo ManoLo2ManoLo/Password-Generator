@@ -11,9 +11,7 @@
     <body>
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-                <h1 class="navbar-item title is-4" href="https://bulma.io">
-                    Password Generator    
-                </h1>
+                <h1 class="navbar-item title is-4">Password Generator</h1>
             </div>
         </nav>
 
@@ -23,7 +21,7 @@
                     <div class="field">
                         <label class="label text-center">How long do you want the password to be? (8 - 128 characters)</label>
                         <div class="control">
-                            <input class="input" id="length" />
+                            <input class="input" id="length" type="number">
                         </div>
                     </div>
 
@@ -58,6 +56,10 @@
                     <div class="field center">
                         <button id="submitBtn" class="button">Generate Password</button>
                     </div>
+
+                    <div class="field center">
+                        <p class="error" id="errorEl"></p>
+                    </div>
                 </div>
             </div>
 
@@ -70,10 +72,10 @@
                     <div class="field">
                         <textarea
                             readonly
-                            id="password"
+                            id="passwordEl"
                             placeholder="Your Secure Password"
                             aria-label="Generated Password"
-                            class="textarea"
+                            class="textarea text-center"
                         ></textarea>
                     </div>
                 </div> 

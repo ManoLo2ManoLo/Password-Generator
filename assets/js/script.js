@@ -1,14 +1,17 @@
 const submitBtn = document.querySelector('#submitBtn');
 
-const length = document.querySelector('#length').value.trim();
+//const length = document.querySelector('#length').value;
 const lowercase = document.querySelector('#lowercase');
 const uppercase = document.querySelector('#uppercase');
 const numeric = document.querySelector('#numeric');
 const special = document.querySelector('#special')
+const passwordEl = document.querySelector('#passwordEl');
+const errorEl = document.querySelector('#errorEl');
 
 function passwordGenerator() {
-  console.log(length)
+  let length = 50;
   let characterList = '';
+  let password = [];
 
   if (lowercase.checked) {
     characterList += "abcdefghijklmnopqrstuvwxyz";
@@ -25,10 +28,23 @@ function passwordGenerator() {
   if (special.checked) {
     characterList += "+=!@#$%^&*()?<>";
   }
-  for (let i = 0; i < length; i++) {
-    do {
-    randomPassword += characterList[Math.floor(Math.random() * characterList.length)];
-    } while (randomPassword === 0)
+
+  if (characterList == 0) {
+    errorEl.innerHTML = 'Please select a password requirement.'
+  } else {
+    if (!length || length < 8 || length > 128) {
+      errorEl.innerHTML = 'Password must be 8 to 128 characters.'
+    } else {
+      errorEl.innerHTML = '';
+
+      for (let i = 0; i < length; i++) {
+        do {
+          password += characterList[Math.floor(Math.random() * characterList.length)];
+        } while (password === 0)
+      }
+  
+      passwordEl.innerHTML = password;
+    }
   }
 }
 
