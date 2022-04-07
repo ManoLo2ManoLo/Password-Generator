@@ -9,8 +9,16 @@
 ## Link(s)
 Link to Application: https://manolo2manolo.github.io/Password-Generator/
 
-## Description
-This application is a random password generator. The user of the application chooses what requirements the generated password will have. After the user successfully generates a password in the text area, in a card that is underneath the password requirements. Inside the card, there is a copy button that will copy the password to the user's clipboard (if pressed).
+## Features
+1. User can select the length and requirements for a password.
+2. Once the generate password button is clicked, the a random password is generated.
+3. User can click the copy button to copy the password in the generated password textarea.
+
+## User Story
+As a user who is constantly reusing the same passowrd and getting hack, I would like an application that will allow me to quickly generate a new password for each site. This will help prevent all my accounts being hacked simultaneously. 
+
+## Clone Repository
+* git clone https://github.com/ManoLo2ManoLo/Password-Generator.git
 
 ### Password Requirements
 Length: This is a input box that accepts only numbers. (8 - 128)<br />
@@ -24,7 +32,7 @@ Special: This is a checkbox, if it is checked off, it will add special character
 If the user does not select any of the character requirement, an error message will appear advising the user to select a character requirement.<br />
 If the user does not type a number in the length, or type a number that is within the parameter (8 - 128), an error message will appear advising them to type a valid number.
 
-## Screenshot
+## Screenshot(s)
 ![Screenshot (553)](https://user-images.githubusercontent.com/88364269/156968400-c078a2d7-cc63-4e27-97b0-ace2d5909edb.png)
 
 ## Credit
